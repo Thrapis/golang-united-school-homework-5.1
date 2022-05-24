@@ -1,22 +1,22 @@
 package square
 
 type Point struct {
-	x, y int
+	X, Y int
 }
 
 type Square struct {
-	start Point
-	a     uint
+	Start Point
+	A     uint
 }
 
-func (receiver) End() Point {
-	// implement me
+func (s Square) End() Point {
+	return Point{s.Start.X + int(s.A), s.Start.Y + int(s.A)}
 }
 
-func (receiver) Area() uint {
-	// implement me
+func (s Square) Area() uint {
+	return s.A * s.A
 }
 
-func (receiver) Perimeter() uint {
-	// implement me
+func (s Square) Perimeter() uint {
+	return s.A * 4
 }
